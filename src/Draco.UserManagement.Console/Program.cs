@@ -5,6 +5,7 @@ using System;
 using System.Linq;
 using Draco.UserManagement.JsonDataProvider.Exceptions;
 using Draco.UserManagement.DataProvider.Models;
+using Draco.Common;
 
 namespace Draco.UserManagement.ConsoleApp
 {
@@ -73,9 +74,16 @@ namespace Draco.UserManagement.ConsoleApp
         private static void NumberOfGendersPerAge()
         {
             var groups = _userManager.GetUsers().GroupBy(x => x.Age).OrderBy(x => x.Key);
+            var genders = EnumUtil.GetValues<Gender>();
             foreach (var group in groups)
             {
-                Console.WriteLine($"Age :{group.Key} Female:{group.Where(x => x.Gender == Gender.Female).Count()}  Male :{group.Where(x => x.Gender == Gender.Male).Count()}");
+                var output = $"Age :{group.Key}";
+
+                foreach (var gender in genders)
+                {
+                    output = $"{output} {gender.ToString()}: {group.Where(x => x.Gender == gender).Count()}";
+                }
+                Console.WriteLine(output);
             }
         }
 

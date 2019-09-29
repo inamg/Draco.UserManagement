@@ -44,13 +44,13 @@ namespace Draco.UserManagement.Tests
         }
 
         [Fact]
-        public void UsersDataProviderJson_WhenJsonFileIsInValid_ShouldThrowInvalidJsonException()
+        public void UsersDataProviderJson_WhenJsonFileIsInValid_ShouldThrowException()
         {
             //Arrange
             var logger = NSubstitute.Substitute.For<ILogger<UsersDataProviderJson>>();
 
             //Act and Assert
-            Assert.Throws<InvalidJsonException>(() => new UsersDataProviderJson(logger, "invalid_json.json"));
+            Assert.Throws<Exception>(() => new UsersDataProviderJson(logger, "invalid_json.json"));
         }
     }
 }
