@@ -19,7 +19,6 @@ namespace Draco.UserManagement
             Check.NotNull(logger, nameof(logger));
             _logger = logger;
 
-            _logger.LogInformation("Users Loaded.");
             _users = dataProvider.Users;
         }
 

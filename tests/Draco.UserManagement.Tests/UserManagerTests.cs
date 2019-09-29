@@ -63,7 +63,7 @@ namespace Draco.UserManagement.Tests
                     FirstName="Inam",
                     LastName="Gull",
                     Age=34,
-                    Gender=Gender.M,
+                    Gender=Gender.Male,
                     Id=1
                 },
                 new User
@@ -71,7 +71,7 @@ namespace Draco.UserManagement.Tests
                     FirstName="John",
                     LastName="Dep",
                     Age=40,
-                    Gender=Gender.M,
+                    Gender=Gender.Male,
                     Id=2
                 }
             };
@@ -89,11 +89,11 @@ namespace Draco.UserManagement.Tests
         }
 
         [Theory]
-        [InlineData(1, "Inam", "Gull", 34, Gender.M)]
-        [InlineData(2, "John", "Gull", 35, Gender.F)]
-        [InlineData(3, "Adam", "Gull", 36, Gender.T)]
+        [InlineData(1, "Inam", "Gull", 34, Gender.Male)]
+        [InlineData(2, "John", "Gull", 35, Gender.Female)]
+        [InlineData(3, "Adam", "Gull", 36, Gender.Trans)]
         [InlineData(4, "Jack", "Gull", 37, Gender.Y)]
-        [InlineData(5, "Bill", "Gull", 38, Gender.O)]
+        [InlineData(5, "Bill", "Gull", 38, Gender.Other)]
         public void GetUsers_WhenDataProviderHasData_ShouldReturnCorrectUserData(int id, string first, string last, int age, Gender gender)
         {
             //Arrange

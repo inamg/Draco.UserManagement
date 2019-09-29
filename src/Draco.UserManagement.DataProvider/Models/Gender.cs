@@ -2,10 +2,10 @@
 {
     public enum Gender
     {
-        M,
-        F,
-        T,
+        Male,
+        Female,
+        Trans,
         Y, // find in data, no idea what is it
-        O
+        Other
     }
 }

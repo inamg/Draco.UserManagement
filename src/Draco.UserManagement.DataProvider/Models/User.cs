@@ -12,6 +12,8 @@ namespace Draco.UserManagement.DataProvider.Models
         [JsonProperty("age")]
         public int Age { get; set; }
         [JsonProperty("gender")]
+
+        [JsonConverter(typeof(GenderJsonConverter))]
         public Gender Gender { get; set; }
     }
 }

@@ -75,7 +75,7 @@ namespace Draco.UserManagement.ConsoleApp
             var groups = _userManager.GetUsers().GroupBy(x => x.Age).OrderBy(x => x.Key);
             foreach (var group in groups)
             {
-                Console.WriteLine($"Age :{group.Key} Female:{group.Where(x => x.Gender == Gender.F).Count()}  Male :{group.Where(x => x.Gender == Gender.M).Count()}");
+                Console.WriteLine($"Age :{group.Key} Female:{group.Where(x => x.Gender == Gender.Female).Count()}  Male :{group.Where(x => x.Gender == Gender.Male).Count()}");
             }
         }
 
