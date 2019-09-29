@@ -7,6 +7,12 @@ The Draco Dwarf is a spheroidal galaxy which was discovered by Albert George Wil
 
 Project read data from json store and displays it on console. With an ability to add customer provider.
 
+## How to add customer provider
+Register UserManagementServices with generic overload
+```
+AddUserManagementServices<CustomerProvider>()
+```
+
 ## Future work
 
 Integration Test
