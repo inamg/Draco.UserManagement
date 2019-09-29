@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Draco.UserManagement.Tests", "tests\Draco.UserManagement.Tests\Draco.UserManagement.Tests.csproj", "{AD6FDEB6-9916-4B3F-927B-FA91E704EED8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Draco.Common", "src\Draco.Common\Draco.Common.csproj", "{997FEF1D-7A38-49A9-AD75-2786356637F9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Draco.UserManagement", "src\Draco.UserManagement\Draco.UserManagement.csproj", "{D3EAAB95-C1C1-4DB9-829B-0850A4DCDB2B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Draco.UserManagement.ConsoleApp", "src\Draco.UserManagement.Console\Draco.UserManagement.ConsoleApp.csproj", "{9F210C83-847D-4FFB-8D73-2D3DCCB35758}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Draco.UserManagement.DataProvider", "src\Draco.UserManagement.DataProvider\Draco.UserManagement.DataProvider.csproj", "{5AEA4717-8332-4C46-9B20-86F560F2A62B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Draco.UserManagement.JsonDataProvider", "src\Draco.UserManagement.JsonDataStore\Draco.UserManagement.JsonDataProvider.csproj", "{26D106B3-0027-43D6-AB85-ECEEE122057D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD6FDEB6-9916-4B3F-927B-FA91E704EED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD6FDEB6-9916-4B3F-927B-FA91E704EED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD6FDEB6-9916-4B3F-927B-FA91E704EED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD6FDEB6-9916-4B3F-927B-FA91E704EED8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{997FEF1D-7A38-49A9-AD75-2786356637F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{997FEF1D-7A38-49A9-AD75-2786356637F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{997FEF1D-7A38-49A9-AD75-2786356637F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{997FEF1D-7A38-49A9-AD75-2786356637F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3EAAB95-C1C1-4DB9-829B-0850A4DCDB2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3EAAB95-C1C1-4DB9-829B-0850A4DCDB2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3EAAB95-C1C1-4DB9-829B-0850A4DCDB2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3EAAB95-C1C1-4DB9-829B-0850A4DCDB2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F210C83-847D-4FFB-8D73-2D3DCCB35758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F210C83-847D-4FFB-8D73-2D3DCCB35758}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F210C83-847D-4FFB-8D73-2D3DCCB35758}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F210C83-847D-4FFB-8D73-2D3DCCB35758}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AEA4717-8332-4C46-9B20-86F560F2A62B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AEA4717-8332-4C46-9B20-86F560F2A62B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AEA4717-8332-4C46-9B20-86F560F2A62B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AEA4717-8332-4C46-9B20-86F560F2A62B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26D106B3-0027-43D6-AB85-ECEEE122057D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26D106B3-0027-43D6-AB85-ECEEE122057D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26D106B3-0027-43D6-AB85-ECEEE122057D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26D106B3-0027-43D6-AB85-ECEEE122057D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35BECD89-DCF1-4E34-BABA-7CAA02046588}
+	EndGlobalSection
+EndGlobal
