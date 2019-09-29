@@ -15,5 +15,14 @@ namespace Draco.UserManagement.Extensions
 
             return services;
         }
+
+        public static IServiceCollection AddUserManagementServices<T>(this IServiceCollection services) where T : class, IUserDataProvider
+        {
+            services
+                .AddSingleton<IUserManager, UserManager>()
+                .AddSingleton<IUserDataProvider, T>();
+
+            return services;
+        }
     }
 }
