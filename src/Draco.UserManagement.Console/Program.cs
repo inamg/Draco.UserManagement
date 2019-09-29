@@ -83,7 +83,7 @@ namespace Draco.UserManagement.ConsoleApp
         {
             //setup DI
             var serviceProvider = new ServiceCollection()
-                                 .AddUserManagementServices("example_data.json")
+                                 .AddUserManagementServices()
                                  .AddLogging(configure => configure.AddConsole())
                                  .BuildServiceProvider();
 

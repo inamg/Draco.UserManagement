@@ -7,7 +7,7 @@ namespace Draco.UserManagement.Extensions
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddUserManagementServices(this IServiceCollection services, string dataFile)
+        public static IServiceCollection AddUserManagementServices(this IServiceCollection services)
         {
             services
                 .AddSingleton<IUserManager, UserManager>()
