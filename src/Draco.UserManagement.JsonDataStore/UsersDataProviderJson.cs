@@ -13,15 +13,14 @@ namespace Draco.UserManagement.JsonDataProvider
     public class UsersDataProviderJson : IUserDataProvider
     {
         private readonly ILogger<UsersDataProviderJson> _logger;
-        private readonly string _jsonFile;
+        private string _jsonFile = "example_data.json";
         public IList<User> Users { get; }
 
-        public UsersDataProviderJson(string jsonFile, ILogger<UsersDataProviderJson> logger)
+        public UsersDataProviderJson(ILogger<UsersDataProviderJson> logger, string jsonFile = "example_data.json")
         {
-            Check.NotNullOrEmpty(jsonFile, nameof(jsonFile));
             Check.NotNull(logger, nameof(logger));
+            Check.NotNullOrEmpty(jsonFile, nameof(jsonFile));
 
-            _jsonFile = jsonFile;
             _logger = logger;
 
             try
@@ -41,13 +40,12 @@ namespace Draco.UserManagement.JsonDataProvider
 
                 throw new InvalidJsonException(msg);
             }
-            catch(Exception exp)
+            catch (Exception exp)
             {
                 _logger.LogError(exp.Message);
 
                 throw exp;
             }
         }
-
     }
 }

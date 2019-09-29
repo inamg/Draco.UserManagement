@@ -11,8 +11,7 @@ namespace Draco.UserManagement.Extensions
         {
             services
                 .AddSingleton<IUserManager, UserManager>()
-                .AddSingleton<IUserDataProvider>(s => new UsersDataProviderJson(dataFile,
-                                                      s.GetRequiredService<ILogger<UsersDataProviderJson>>()));
+                .AddSingleton<IUserDataProvider, UsersDataProviderJson>();
 
             return services;
         }

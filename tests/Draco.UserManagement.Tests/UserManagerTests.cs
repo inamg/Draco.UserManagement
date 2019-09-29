@@ -8,6 +8,8 @@ using System.Linq;
 
 namespace Draco.UserManagement.Tests
 {
+    // In real life will write many more test
+
     public class UserManagerTests
     {
         [Fact]
