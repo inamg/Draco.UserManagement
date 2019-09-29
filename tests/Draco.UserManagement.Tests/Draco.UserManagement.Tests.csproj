@@ -7,11 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="example_data.json" />
+    <None Remove="invalid_json.json" />
+    <None Remove="test_data.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="example_data.json">
+    <EmbeddedResource Include="invalid_json.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test_data.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

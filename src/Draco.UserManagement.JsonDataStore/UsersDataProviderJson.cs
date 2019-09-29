@@ -13,7 +13,7 @@ namespace Draco.UserManagement.JsonDataProvider
     public class UsersDataProviderJson : IUserDataProvider
     {
         private readonly ILogger<UsersDataProviderJson> _logger;
-        private string _jsonFile = "example_data.json";
+        private string _jsonFile;
         public IList<User> Users { get; }
 
         public UsersDataProviderJson(ILogger<UsersDataProviderJson> logger, string jsonFile = "example_data.json")
@@ -22,6 +22,7 @@ namespace Draco.UserManagement.JsonDataProvider
             Check.NotNullOrEmpty(jsonFile, nameof(jsonFile));
 
             _logger = logger;
+            _jsonFile = jsonFile;
 
             try
             {
@@ -33,6 +34,14 @@ namespace Draco.UserManagement.JsonDataProvider
                 }
             }
             catch (JsonReaderException exp)
+            {
+                var msg = $"Invalid json Data : {exp.Message}";
+
+                _logger.LogError(msg);
+
+                throw new InvalidJsonException(msg);
+            }
+            catch (JsonSerializationException exp)
             {
                 var msg = $"Invalid json Data : {exp.Message}";
 
