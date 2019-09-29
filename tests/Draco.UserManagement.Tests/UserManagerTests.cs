@@ -5,6 +5,7 @@ using Draco.UserManagement.DataProvider;
 using System.Collections.Generic;
 using Draco.UserManagement.DataProvider.Models;
 using System.Linq;
+using Microsoft.Extensions.Logging;
 
 namespace Draco.UserManagement.Tests
 {
@@ -15,7 +16,7 @@ namespace Draco.UserManagement.Tests
         [Fact]
         public void UserManager_WhenDataProviderIsNull_ShouldThrowArgumentNullException()
         {
-            Assert.Throws<ArgumentNullException>(() => new UserManager(null));
+            Assert.Throws<ArgumentNullException>(() => new UserManager(null, null));
         }
 
         [Fact]
@@ -23,7 +24,8 @@ namespace Draco.UserManagement.Tests
         {
             //Arrange
             var userDataProvider = Substitute.For<IUserDataProvider>();
-            var userManager = new UserManager(userDataProvider);
+            var logger = Substitute.For<ILogger<UserManager>>();
+            var userManager = new UserManager(userDataProvider, logger);
             userDataProvider.Users.Returns(new List<User>());
 
             //Act
@@ -38,7 +40,8 @@ namespace Draco.UserManagement.Tests
         {
             //Arrange
             var userDataProvider = Substitute.For<IUserDataProvider>();
-            var userManager = new UserManager(userDataProvider);
+            var logger = Substitute.For<ILogger<UserManager>>();
+            var userManager = new UserManager(userDataProvider, logger);
             userDataProvider.Users.Returns(new List<User>());
 
             //Act
@@ -73,8 +76,9 @@ namespace Draco.UserManagement.Tests
                 }
             };
             var userDataProvider = Substitute.For<IUserDataProvider>();
+            var logger = Substitute.For<ILogger<UserManager>>();
             userDataProvider.Users.Returns(userList);
-            var userManager = new UserManager(userDataProvider);
+            var userManager = new UserManager(userDataProvider, logger);
 
             //Act
             var users = userManager.GetUsers();
@@ -105,8 +109,9 @@ namespace Draco.UserManagement.Tests
                 }
             };
             var userDataProvider = Substitute.For<IUserDataProvider>();
+            var logger = Substitute.For<ILogger<UserManager>>();
             userDataProvider.Users.Returns(userList);
-            var userManager = new UserManager(userDataProvider);
+            var userManager = new UserManager(userDataProvider, logger);
 
             //Act
             var users = userManager.GetUsers(x => x.Id == id);
