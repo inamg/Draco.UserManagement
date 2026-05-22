@@ -16,4 +16,4 @@ AddUserManagementServices<CustomerProvider>()
 ## Future work
 
 - Integration Test
-- For big json files I will add some sort of caching where only some of the json will exist in memory and rest of it will still be on disk.
+- For large json files I will add some sort of caching where only some of the json will exist in memory and rest of it will still be on disk.
